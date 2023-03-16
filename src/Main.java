@@ -18,20 +18,28 @@ public class Main {
 
 
 
-        printReport(serviceStation, cars,bicycle,trucks);
+        printReport(serviceStation, cars);
+        printReport(serviceStation, bicycle);
+        printReport(serviceStation, trucks);
+
+
 
 
     }
 
-    private static void printReport(check serviceStation, Car[] cars, Bicycle[] bicycle, Truck[] trucks) {
+    private static void printReport(check serviceStation, Car[] cars) {
         serviceStation.check(cars[0]);
         serviceStation.check(cars[1]);
-        serviceStation.check(bicycle[0]);
-        serviceStation.check(bicycle[1]);
-        serviceStation.check(trucks[0] );
-        serviceStation.check(trucks[1]);
-
     }
+    private static void printReport(check servisStation, Bicycle[]bicycles) {
+        servisStation.check(bicycles[0]);
+        servisStation.check(bicycles[1]);
+    }
+    private static void printReport(check servisStation, Truck[]trucks){
+        servisStation.check(trucks[0]);
+        servisStation.check(trucks[1]);
+    }
+
 }
 
 //serviceStation.check(cars[0], bicycle[0], trucks[0]);
